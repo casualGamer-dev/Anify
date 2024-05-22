@@ -80,7 +80,7 @@ export default class GogoAnime extends AnimeProvider {
                 title: $(el).find(`div.name`).text(),
                 isFiller: false,
                 img: null,
-                hasDub: id.includes("-dub"),
+                hasDub: $(el).find('p.name > a').text().toLowerCase().includes('dub'),
                 description: null,
                 rating: null,
             });
